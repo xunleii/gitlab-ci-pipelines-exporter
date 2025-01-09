@@ -74,7 +74,7 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet: &httpProbe
-              path: /healthz
+              path: /{{ .Values.httpProbePath }}
               port: http
             periodSeconds: 20
             timeoutSeconds: 5
